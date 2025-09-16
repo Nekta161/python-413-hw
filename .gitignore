@@ -1,0 +1,14 @@
+__pycache__/
+*.pyc
+.env
+.venv
+*.rar
+.vscode/
+.DS_Store
+*.log
+db.sqlite3
+barbershop/
+core/
+manage.py
+pyproject.toml
+poetry.lock

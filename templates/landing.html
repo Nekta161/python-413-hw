@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Барбершоп</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'main.css' %}" />
+  </head>
+  <body>
+    <h1>Добро пожаловать в барбершоп!</h1>
+    <h2>Наши мастера:</h2>
+    <ul>
+      {% for master in masters %}
+      <li>{{ master.name }}</li>
+      {% endfor %}
+    </ul>
+
+    <h2>Услуги:</h2>
+    <ul>
+      {% for service in services %}
+      <li>{{ service }}</li>
+      {% endfor %}
+    </ul>
+
+    <a href="{% url 'thanks' %}">Оставить заявку</a>
+    <a href="{% url 'orders_list' %}">Список заявок</a>
+
+    <script src="{% static 'main.js' %}"></script>
+  </body>
+</html>
